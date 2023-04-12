@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h4>TNA Detail </h4>
+    <p>Details for reference No. {{ tna_detail.tna_id }}</p>
+
+    <ul>
+        <li>{{ chosenType }}: {{ chosenValue }}</li>
+    </ul>
+
+    <a href="{% url 'tna_list_url' %}"  class="btn btn-primary">Back to TNA Record List</a>
+{% endblock %}

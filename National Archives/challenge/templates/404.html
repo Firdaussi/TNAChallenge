@@ -1,0 +1,10 @@
+{% extends './base.html' %}
+
+{% block content %}
+<h2>Sorry</h2>
+
+<h4>I cannot find the TNA record you requested!</h4>
+
+<a href="{% url 'tna_list_url' %}"  class="btn btn-primary">Back to TNA Record List</a>
+
+{% endblock %}

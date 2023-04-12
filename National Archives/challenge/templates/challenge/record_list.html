@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h4>TNA Records</h4>
+  <p>The following is a list of id's currently stored in the local database. Please click on one to see more details.</p>
+  <ul>
+    {% for record in tna_list %}
+      <li><a href="{% url 'tna_detail_url' record.tna_id %}">{{ record.tna_id }}</a></li>
+    {% empty %}
+      <li>No records found.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
